@@ -155,7 +155,7 @@
       <Context docBase="C:\Users\KITCOOP\Desktop\CRUD\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\KITCOOP\Desktop\CRUD\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\CRUDEx" path="/CRUDEx" reloadable="true" source="org.eclipse.jst.jee.server:CRUDEx">
 	<Resource auth="Container" driverClassName="org.mariadb.jdbc.Driver" name="jdbc/mariadb3" password="BOARD1" type="javax.sql.DataSource" url="jdbc:mariadb://localhost:3306/Board" username="BOARD1"/>
 </Context><Context docBase="C:\Users\KITCOOP\Desktop\CRUD\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\CRUDEx01" path="/CRUDEx01" reloadable="true" source="org.eclipse.jst.jee.server:CRUDEx01">
-	<Resource auth="Container" driverClassName="org.mariadb.jdbc.Driver" name="jdbc/mariadb3" password="EMOTBOARD1" type="javax.sql.DataSource" url="jdbc:mariadb://localhost:3306/EmotBoard" username="EMOTBOARD1"/>
+	<Resource auth="Container" driverClassName="org.mariadb.jdbc.Driver" name="jdbc/mariadb3" password="BOARD1" type="javax.sql.DataSource" url="jdbc:mariadb://localhost:3306/Board" username="BOARD1"/>
 </Context></Host>
     </Engine>
   </Service>

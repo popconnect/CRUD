@@ -3,8 +3,8 @@
 	<Resource auth="Container"
 			  name="jdbc/mariadb3"
 			  driverClassName="org.mariadb.jdbc.Driver" 
-			  url="jdbc:mariadb://localhost:3306/EmotBoard"
-			  username="EMOTBOARD1"
-			  password="EMOTBOARD1"
+			  url="jdbc:mariadb://localhost:3306/Board"
+			  username="BOARD1"
+			  password="BOARD1"
 			  type="javax.sql.DataSource" />
 </Context>

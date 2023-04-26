@@ -12,4 +12,22 @@
 		<item key="DIALOG_X_ORIGIN" value="809"/>
 		<item key="DIALOG_Y_ORIGIN" value="397"/>
 	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\KITCOOP\git\CRUD\.git">
+			<item value="false"/>
+			<item value="KITCOOP &lt;kwiwolf@naver.com&gt;"/>
+			<item value="4-26 crud"/>
+			<item value="KITCOOP &lt;kwiwolf@naver.com&gt;"/>
+			<item value="e1ffab49f58f82882a86c14074a124d6635a44ca"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+	</section>
 </section>
