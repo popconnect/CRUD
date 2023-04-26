@@ -1,0 +1,58 @@
+--테이블명 : board1	
+
+CREATE DATABASE BOARD;
+CREATE USER BOARD1 IDENTIFIED BY BOARD1;
+GRANT ALL PRIVILEGES ON BOARD.* TO BOARD1@localhost;
+
+--번호		seq		int		not null primary key auto_increment
+--제목		subject		varchar(150)	not null
+--글쓴이		writer		varchar(12)	not null	
+--이메일		mail		varchar(50)	
+--비밀번호		password		varchar(12)	not null
+--내용		content		varchar(2000)
+--조회수		hit		int		not null
+--아이피		wip		varchar(15)	not null
+--등록일		wdate		datetime		not null
+
+create table board1 (
+seq         int                   not null     primary key auto_increment,
+subject    varchar(150)       not null,
+writer      varchar(12)         not null, 
+mail        varchar(50),
+password varchar(12)         not null,
+content   varchar(2000),
+hit          int                    not null,
+wip         varchar(15)         not null,
+wdate      datetime           not null
+);
+
+데이베이스명 : board
+사용자명 : board
+암호 : 1234
+
+insert into board1 values ( 0, '제목', '이름', 'test@test.com', '1234', '내용', 0, '000.000.000.000', now() );
+
+페이지 흐름 + 데이터의 흐름
+
+글목록		board_list1.jsp
+글쓰기		board_write1.jsp
+글자세히보기	board_view1.jsp
+글수정		board_modify1.jsp
+글삭제		board_delete1.jsp
+
+페이지 흐름(page navigation)
+
+board_list1.jsp
+	(X)			(입력내용)			(X)
+	board_write1.jsp		-> board_write1_ok.jsp	-> board_list1.jsp
+	(seq)
+	board_view1.jsp
+		(seq)		(seq, 수정내용)		(seq)
+		board_modify1.jsp	-> board_modify1_ok.jsp	-> board_view1.jsp
+		(seq)		(seq, 비밀번호)		(X)
+		board_delete1.jsp	-> board_delete1_ok.jsp	-> board_list1.jsp
+
+
+
+
+

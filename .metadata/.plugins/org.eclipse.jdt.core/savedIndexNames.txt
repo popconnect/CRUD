@@ -1,0 +1,7 @@
+INDEX VERSION 1.132+C:\Users\KITCOOP\Desktop\CRUD\.metadata\.plugins\org.eclipse.jdt.core
+744677527.index
+3904330687.index
+2985110854.index
+3935707158.index
+1256613276.index
+1865797976.index

@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<%@ page import="javax.naming.Context"%>
+<%@ page import="javax.naming.InitialContext"%>
+<%@ page import="javax.naming.NamingException"%>
+
+<%@ page import="javax.sql.DataSource"%>
+
+<%@ page import="java.sql.Connection"%>
+<%@ page import="java.sql.PreparedStatement"%>
+<%@ page import="java.sql.SQLException"%>
+
+<%
+	request.setCharacterEncoding( "utf-8" );
+
+	String subject = request.getParameter( "subject" );
+	String writer = request.getParameter( "writer" );
+	
+	//
+	String mail = "";
+	if( !request.getParameter("mail1").equals("") 
+			&& !request.getParameter("mail2").equals("") ) {
+		mail = request.getParameter( "mail1" ) + "@" + request.getParameter( "mail2" );	
+	}
+	
+	String password = request.getParameter( "password" );
+	String content = request.getParameter( "content" );
+	
+	String wip = request.getRemoteAddr();
+	Char emot = request.getParameter("emot").substring(request.getParameter("emot").length() -2 );
+	System.out.println(emot);
+	
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	
+	int flag = 1;
+	
+	try {
+		Context initCtx = new InitialContext();
+		Context envCtx = (Context)initCtx.lookup( "java:comp/env" );
+		DataSource dataSource = (DataSource)envCtx.lookup( "jdbc/mariadb3" );
+		
+		conn = dataSource.getConnection();
+		
+		String sql = "insert into board1 values ( 0, ?, ?, ?, ?, ?, ?, 0, ?, now() );";
+		pstmt = conn.prepareStatement( sql );
+		pstmt.setString( 1, subject );
+		pstmt.setString( 2, writer );
+		pstmt.setString( 3, mail );
+		pstmt.setString( 4, password );
+		pstmt.setString( 5, content );
+		pstmt.setString( 6, emot );
+		pstmt.setString( 7, wip );
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
